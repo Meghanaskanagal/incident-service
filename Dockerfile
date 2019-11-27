@@ -1,4 +1,4 @@
-FROM localhost/test:first
+FROM docker.io/meghanaskanagal/test:first
 
 ENV JAVA_APP_DIR=/deployments
 
