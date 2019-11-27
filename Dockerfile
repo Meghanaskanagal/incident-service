@@ -13,5 +13,5 @@ RUN ["mvn", "dependency:resolve"]
 RUN ["mvn", "verify"]
 
 RUN ["mvn", "package"]
-COPY app/target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
+COPY /home/jboss/app/target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
 
