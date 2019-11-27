@@ -4,6 +4,14 @@ ENV JAVA_APP_DIR=/deployments
 
 EXPOSE 8080 8443
 
-RUN mvn package
+COPY . /app
 
+WORKDIR /app
+
+
+RUN ["mvn", "dependency:resolve"]  
+RUN ["mvn", "verify"]
+
+RUN ["mvn", "package"]
 COPY target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
+
