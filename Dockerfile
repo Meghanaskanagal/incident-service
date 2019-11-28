@@ -8,7 +8,5 @@ WORKDIR /app
 
 RUN ["mvn", "package"]
 
-RUN sleep 30m
-
-COPY /target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
+COPY target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
 
