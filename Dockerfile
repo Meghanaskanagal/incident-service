@@ -6,8 +6,11 @@ EXPOSE 8080 8443
 COPY . /app
 WORKDIR /app
 
-RUN ["mvn", "dependency:resolve"]  
-RUN ["mvn", "verify"]
+// RUN ["mvn", "dependency:resolve"]  
+// RUN ["mvn", "verify"]
 RUN ["mvn", "package"]
+
+RUN sleep
+
 COPY /target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
 
