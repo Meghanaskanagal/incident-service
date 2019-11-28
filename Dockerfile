@@ -9,5 +9,5 @@ WORKDIR /app
 RUN ["mvn", "dependency:resolve"]  
 RUN ["mvn", "verify"]
 RUN ["mvn", "package"]
-COPY incident-service-1.1.0-SNAPSHOT.jar /deployments/
+COPY /target/incident-service-1.1.0-SNAPSHOT.jar /deployments/
 
