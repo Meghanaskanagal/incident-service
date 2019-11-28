@@ -6,8 +6,6 @@ EXPOSE 8080 8443
 COPY . /app
 WORKDIR /app
 
-// RUN ["mvn", "dependency:resolve"]  
-// RUN ["mvn", "verify"]
 RUN ["mvn", "package"]
 
 RUN sleep
